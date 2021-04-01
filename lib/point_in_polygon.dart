@@ -18,7 +18,7 @@ class Poly {
     for (int i = 0; i < vertices.length; i += 1) {
       final Point vertB =
           i == vertices.length - 1 ? vertices[0] : vertices[i + 1];
-      if (_rayCastIntersect(point, vertices[i], vertB)) {
+      if (Poly.rayCastIntersect(point, vertices[i], vertB)) {
         intersectCount += 1;
       }
     }
@@ -30,13 +30,13 @@ class Poly {
   /// will intersect with the line between [vertA] and [vertB]
   /// Refer to `https://en.wikipedia.org/wiki/Point_in_polygon` for more explanation
   /// or the example comment bloc at the end of this file
-  static bool _rayCastIntersect(Point point, Point vertA, Point vertB) {
+  static bool rayCastIntersect(Point point, Point vertA, Point vertB) {
     final double aY = vertA.y;
     final double bY = vertB.y;
     final double aX = vertA.x;
     final double bX = vertB.x;
     final double pY = point.y;
-    final double pX = point.y;
+    final double pX = point.x;
 
     if ((aY > pY && bY > pY) || (aY < pY && bY < pY) || (aX < pX && bX < pX)) {
       // The case where the ray does not possibly pass through the polygon edge,
