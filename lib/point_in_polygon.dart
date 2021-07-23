@@ -1,7 +1,7 @@
 library point_in_polygon;
 
 class Point {
-  Point({this.x, this.y});
+  Point({required this.x, required this.y});
 
   /// X axis coordinate or longitude
   double x;
