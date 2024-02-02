@@ -1,7 +1,10 @@
 name: point_in_polygon
-description: A new Flutter package project.
+description: Flutter package refining "point_in_polygon" to handle some edge cases. Fixes false positives with vertical edges and handles edge/vertex cases accurately. Improved Ray-Casting algorithm ensures reliable results.
 version: 1.0.0
-homepage: https://github.com/molteo-engineering-team/point_in_polygon
+homepage: https://github.com/aa-cee/point_in_polygon
+
+# Placeholder for publish_to since it won't be published on pub.dev
+publish_to: 'none'
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
